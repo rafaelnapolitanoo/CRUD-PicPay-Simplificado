@@ -10,8 +10,9 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Table(name = "transactions")
+
 @Entity(name = "transactions")
+@Table(name = "transactions")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -30,7 +31,7 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = "receiver_id")
-    private String receiver;
+    private User receiver;
 
     private LocalDateTime timestamp;
 
